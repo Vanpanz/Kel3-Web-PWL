@@ -1,0 +1,90 @@
+:root {
+    --primary-teal: #64b3a4;
+    --dark-teal: #4c8c80;
+    --sidebar-bg: #80c4b7;
+    --bg-light: #f4f9f8;
+    --white: #ffffff;
+    --text-dark: #2d3436;
+    --text-muted: #636e72;
+    --shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    -webkit-font-smoothing: antialiased;
+}
+
+body { 
+    font-family: 'Inter', 'Plus Jakarta Sans', sans-serif; 
+    background-color: var(--bg-light); 
+    color: var(--text-dark); 
+    line-height: 1.6;
+}
+
+.container { 
+    display: flex; 
+    min-height: 100vh; 
+}
+
+/* --- SIDEBAR (Fixed/Sticky) --- */
+.sidebar { 
+    width: 260px; 
+    background-color: var(--sidebar-bg); 
+    color: white; 
+    padding: 40px 20px; 
+    position: sticky; /* Membuat navbar tidak ikut terscroll */
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.logo-circle { 
+    width: 70px; 
+    height: 70px; 
+    background: white; 
+    border-radius: 20px; 
+    margin: 0 auto 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.sidebar-brand h2 { 
+    text-align: center; 
+    letter-spacing: 2px; 
+    font-size: 1.2rem; 
+    font-weight: 800;
+    color: white;
+}
+
+.sidebar-nav ul { 
+    list-style: none; 
+    margin-top: 50px; 
+}
+
+.sidebar-nav li { 
+    padding: 14px 18px; 
+    margin-bottom: 10px; 
+    border-radius: 12px; 
+    cursor: pointer; 
+    transition: 0.3s ease; 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.sidebar-nav li:hover { 
+    background: rgba(255, 255, 255, 0.15); 
+    transform: translateX(5px);
+}
+
+.sidebar-nav li.active { 
+    background: white; 
+    color: var(--primary-teal); 
+    font-weight: 700;
+    box-shadow: var(--shadow);
+}
